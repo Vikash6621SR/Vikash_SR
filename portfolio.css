@@ -1,0 +1,270 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    text-decoration: none;
+}
+
+body{
+    background: #000;
+    color: #fff;
+}
+
+/* HEADER */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    background: black;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo .sr{
+    color: rgb(56, 185, 5);
+}
+
+.nav a{
+    margin-left: 25px;
+    color: white;
+    font-weight: 600;
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav a:hover{
+    color: rgb(56, 185, 5);
+}
+
+/* underline effect */
+.nav a::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: rgb(56, 185, 5);
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.nav a:hover::after{
+    width: 100%;
+}
+
+/* MENU ICON */
+#menu-icon{
+    display: none;
+    font-size: 28px;
+}
+
+/* SECTION */
+.section1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px 8%;
+    flex-wrap: wrap;
+}
+
+/* IMAGE */
+#nimg{
+    width: 280px;
+    border-radius: 20px;
+    border: 4px solid rgb(56, 185, 5);
+    transition: 0.3s;
+}
+
+#nimg:hover{
+    transform: scale(1.05);
+}
+
+/* INTRO */
+.myintro{
+    max-width: 500px;
+}
+
+#name span{
+    color: rgb(56, 185, 5);
+    font-size: 32px;
+}
+
+#role span{
+    color: rgb(56, 185, 5);
+}
+
+.myintro p{
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+/* BUTTON */
+.btn{
+    padding: 10px 20px;
+    margin: 10px 10px 10px 0;
+    border: 2px solid rgb(56, 185, 5);
+    background: transparent;
+    color: rgb(56, 185, 5);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background: rgb(56, 185, 5);
+    color: white;
+}
+
+/* SOCIAL */
+.mylinks a{
+    font-size: 25px;
+    margin-right: 15px;
+    color: white;
+    transition: 0.3s;
+}
+
+.mylinks a:hover{
+    color: rgb(56, 185, 5);
+    transform: scale(1.2);
+}
+
+/* ABOUT */
+.parent{
+    margin: 40px 8%;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(to right, orange, green, red);
+    color: black;
+    text-align: center;
+}
+
+#aboutp{
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* SKILLS */
+.parent2{
+    margin: 40px 8%;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(white, gray);
+    color: black;
+    text-align: center;
+}
+
+.child1{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.set{
+    width: 200px;
+}
+
+.set img{
+    width: 70px;
+    border-radius: 50%;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+/* PROJECT */
+.project{
+    margin: 40px 8%;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    background: linear-gradient(to right, orange, red);
+}
+
+.projcon p{
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* FOOTER */
+footer{
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact a{
+    display: block;
+    margin: 10px;
+    color: white;
+    transition: 0.3s;
+}
+
+.contact a:hover{
+    color: rgb(56, 185, 5);
+}
+
+/* ========================= */
+/* 📱 RESPONSIVE DESIGN */
+/* ========================= */
+
+@media(max-width: 768px){
+
+    #menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav{
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: black;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav a{
+        margin: 15px 0;
+        display: block;
+    }
+
+    .nav.active{
+        display: flex;
+    }
+
+    .section1{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #nimg{
+        width: 200px;
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width: 480px){
+    .logo{
+        font-size: 22px;
+    }
+
+    #name span{
+        font-size: 24px;
+    }
+
+    .btn{
+        padding: 8px 15px;
+    }
+}
